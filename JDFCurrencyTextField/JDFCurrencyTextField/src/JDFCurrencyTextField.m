@@ -108,6 +108,7 @@
 {
     [super setDelegate:self];
     self.keyboardType = UIKeyboardTypeDecimalPad;
+    [self formatTextAfterEditing];
 }
 
 
