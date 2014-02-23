@@ -21,6 +21,7 @@
 		F21D809B18B9FC6300CB4FB9 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F21D807D18B9FC6300CB4FB9 /* UIKit.framework */; };
 		F21D80A318B9FC6300CB4FB9 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F21D80A118B9FC6300CB4FB9 /* InfoPlist.strings */; };
 		F21D80A518B9FC6300CB4FB9 /* JDFCurrencyTextFieldTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F21D80A418B9FC6300CB4FB9 /* JDFCurrencyTextFieldTests.m */; };
+		F21D80B118BA03E900CB4FB9 /* JDFCurrencyTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = F21D80B018BA03E900CB4FB9 /* JDFCurrencyTextField.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,8 @@
 		F21D80A018B9FC6300CB4FB9 /* JDFCurrencyTextFieldTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "JDFCurrencyTextFieldTests-Info.plist"; sourceTree = "<group>"; };
 		F21D80A218B9FC6300CB4FB9 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		F21D80A418B9FC6300CB4FB9 /* JDFCurrencyTextFieldTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JDFCurrencyTextFieldTests.m; sourceTree = "<group>"; };
+		F21D80AF18BA03E900CB4FB9 /* JDFCurrencyTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JDFCurrencyTextField.h; path = src/JDFCurrencyTextField.h; sourceTree = "<group>"; };
+		F21D80B018BA03E900CB4FB9 /* JDFCurrencyTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JDFCurrencyTextField.m; path = src/JDFCurrencyTextField.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +115,7 @@
 		F21D807F18B9FC6300CB4FB9 /* JDFCurrencyTextField */ = {
 			isa = PBXGroup;
 			children = (
+				F21D80AE18BA03DB00CB4FB9 /* JDFCurrencyTextField */,
 				F21D808818B9FC6300CB4FB9 /* AppDelegate.h */,
 				F21D808918B9FC6300CB4FB9 /* AppDelegate.m */,
 				F21D808B18B9FC6300CB4FB9 /* Main.storyboard */,
@@ -150,6 +154,15 @@
 				F21D80A118B9FC6300CB4FB9 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F21D80AE18BA03DB00CB4FB9 /* JDFCurrencyTextField */ = {
+			isa = PBXGroup;
+			children = (
+				F21D80AF18BA03E900CB4FB9 /* JDFCurrencyTextField.h */,
+				F21D80B018BA03E900CB4FB9 /* JDFCurrencyTextField.m */,
+			);
+			name = JDFCurrencyTextField;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -250,6 +263,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F21D809018B9FC6300CB4FB9 /* ViewController.m in Sources */,
+				F21D80B118BA03E900CB4FB9 /* JDFCurrencyTextField.m in Sources */,
 				F21D808A18B9FC6300CB4FB9 /* AppDelegate.m in Sources */,
 				F21D808618B9FC6300CB4FB9 /* main.m in Sources */,
 			);
@@ -460,6 +474,7 @@
 				F21D80AA18B9FC6300CB4FB9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F21D80AB18B9FC6300CB4FB9 /* Build configuration list for PBXNativeTarget "JDFCurrencyTextFieldTests" */ = {
 			isa = XCConfigurationList;
@@ -468,6 +483,7 @@
 				F21D80AD18B9FC6300CB4FB9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
