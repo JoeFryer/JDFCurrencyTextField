@@ -7,23 +7,31 @@
 //
 
 #import "ViewController.h"
+#import "JDFCurrencyTextField.h"
+
 
 @interface ViewController ()
 
 @end
+
 
 @implementation ViewController
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
+    
+    self.currencyField.text = @"100";
+    
+    UITapGestureRecognizer *recognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleTap)];
+    recognizer.numberOfTapsRequired = 1;
+    [self.view addGestureRecognizer:recognizer];
 }
 
-- (void)didReceiveMemoryWarning
+- (void)handleTap
 {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    [self.view endEditing:YES];
 }
+
 
 @end

@@ -8,6 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
+@class JDFCurrencyTextField;
+
 @interface ViewController : UIViewController
+
+@property (weak, nonatomic) IBOutlet JDFCurrencyTextField *currencyField;
 
 @end
