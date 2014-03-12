@@ -127,10 +127,6 @@
     } else {
         super.text = [number stringValue];
     }
-    
-    if ([self.realDelegate respondsToSelector:@selector(textFieldDidBeginEditing:)]) {
-        [self.realDelegate textFieldDidBeginEditing:self];
-    }
 }
 
 - (void)formatTextAfterEditing
@@ -146,10 +142,6 @@
     }
     
     super.text = [self.currencyFormatter stringFromNumber:number];
-    
-    if ([self.realDelegate respondsToSelector:@selector(textFieldDidEndEditing:)]) {
-        [self.realDelegate textFieldDidEndEditing:self];
-    }
 }
 
 
@@ -158,11 +150,17 @@
 -(void)textFieldDidBeginEditing:(UITextField *)textField
 {
     [self formatTextInPreparationForEditing];
+    if ([self.realDelegate respondsToSelector:@selector(textFieldDidBeginEditing:)]) {
+        [self.realDelegate textFieldDidBeginEditing:self];
+    }
 }
 
 - (void)textFieldDidEndEditing:(UITextField *)textField
 {
     [self formatTextAfterEditing];
+    if ([self.realDelegate respondsToSelector:@selector(textFieldDidEndEditing:)]) {
+        [self.realDelegate textFieldDidEndEditing:self];
+    }
 }
 
 
