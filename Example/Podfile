@@ -1,0 +1,10 @@
+target 'JDFCurrencyTextField', :exclusive => true do
+  pod "JDFCurrencyTextField", :path => "../"
+end
+
+target 'Tests', :exclusive => true do
+  pod "JDFCurrencyTextField", :path => "../"
+
+  pod 'Specta', '~> 0.2.1'
+  pod 'Expecta'
+end
