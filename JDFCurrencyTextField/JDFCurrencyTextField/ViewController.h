@@ -10,7 +10,7 @@
 
 @class JDFCurrencyTextField;
 
-@interface ViewController : UIViewController
+@interface ViewController : UIViewController <UITextFieldDelegate>
 
 @property (weak, nonatomic) IBOutlet JDFCurrencyTextField *currencyField;
 

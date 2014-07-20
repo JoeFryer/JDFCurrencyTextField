@@ -50,6 +50,12 @@
     self.currencyFormatter.locale = locale;
 }
 
+- (void)setDecimalValue:(NSDecimalNumber *)decimalValue
+{
+    self.text = [decimalValue stringValue];
+    [self formatTextAfterEditing];
+}
+
 
 #pragma mark - Getters
 
@@ -61,9 +67,6 @@
     return _locale;
 }
 
-
-#pragma mark - Getters
-
 - (NSNumberFormatter *)currencyFormatter
 {
     if (!_currencyFormatter) {
@@ -74,12 +77,12 @@
     return _currencyFormatter;
 }
 
-- (NSNumber *)numericValue
+- (NSDecimalNumber *)decimalValue
 {
     if (self.editing) {
-        return [NSNumber numberWithDouble:[self.text doubleValue]];
+        return [[NSDecimalNumber alloc] initWithDouble:[self.text doubleValue]];
     } else {
-        return [self.currencyFormatter numberFromString:self.text];
+        return [NSDecimalNumber decimalNumberWithDecimal:[[self.currencyFormatter numberFromString:self.text] decimalValue]];
     }
 }
 

@@ -8,20 +8,20 @@
 
 #import <UIKit/UIKit.h>
 
-/** A drop-in replacement for UITextField, that makes it easy to show a monetary value. 
+/** A drop-in replacement for UITextField, that makes it easy to work with monetary values.
  
-    To set the initial text, set it using @c text as normal, but set it as an unformatted numerical string (it will automatically be displayed as a currency string).
+    You can set the value of the field, either by setting the @c text as normal, or by setting the @c decimalValue.
  
     The locale defaults to currentLocale, but it can be changed.
  */
 
 @interface JDFCurrencyTextField : UITextField <UITextFieldDelegate>
 
-/** The numeric value of currency string being displayed in the field.
+/** The decimal value of text field.
  */
-@property (nonatomic, readonly) NSNumber *numericValue;
+@property (nonatomic, strong) NSDecimalNumber *decimalValue;
 
-/** The locale the the currency value is displayed in. The default is the currentLocale. If you are going to change this, you should do so before setting the field's text (otherwise the text that is set will be lost).
+/** The locale the the currency value is displayed in. The default is the currentLocale. If you are going to change this, you should do so before setting the field's text.
  */
 @property (nonatomic, strong) NSLocale *locale;
 

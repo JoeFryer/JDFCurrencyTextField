@@ -21,7 +21,9 @@
 {
     [super viewDidLoad];
     
-    self.currencyField.text = @"100";
+    NSDecimalNumber *value = [[NSDecimalNumber alloc] initWithDouble:1.1];
+    self.currencyField.decimalValue = value;
+    self.currencyField.delegate = self;
     
     UITapGestureRecognizer *recognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleTap)];
     recognizer.numberOfTapsRequired = 1;
@@ -31,6 +33,12 @@
 - (void)handleTap
 {
     [self.view endEditing:YES];
+}
+
+- (void)textFieldDidEndEditing:(UITextField *)textField
+{
+    NSLog(@"Value: %@", ((JDFCurrencyTextField *)textField).decimalValue);
+    NSLog(@"Text: %@", textField.text);
 }
 
 
