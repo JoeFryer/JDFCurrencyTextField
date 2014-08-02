@@ -12,12 +12,12 @@ Pod::Spec.new do |s|
   s.version          = "2.1"
   s.summary          = "A drop-in replacement for UITextField to make it easier to work with monetary values."
   s.description      = <<-DESC
-                        JDFCurrencyTextField is a drop-in replacement for UITextField to make it easier to work with monetary values. JDFCurrencyTextField makes it easier to enter monetary values because it formats the cell's text as a numeric string while the user is editing it, and formats it back to a currency string when they have finished. It defaults to using the currentLocale for the formatting, but this can be changed if necessary.                       
+                        JDFCurrencyTextField is a drop-in replacement for UITextField to make it easier to work with monetary values. JDFCurrencyTextField makes it easier to enter monetary values because it formats the cell's text as a numeric string while the user is editing it, and formats it back to a currency string when they have finished. It defaults to using the currentLocale for the formatting, but this can be changed if necessary.
                         DESC
   s.homepage         = "https://github.com/JoeFryer/JDFCurrencyTextField"
   s.license          = 'MIT'
   s.author           = { "Joe Fryer" => "joe.d.fryer@gmail.com" }
-  s.source           = { :git => "https://github.com/<GITHUB_USERNAME>/JDFCurrencyTextField.git", :tag => s.version.to_s }
+  s.source           = { :git => "https://github.com/JoeFryer/JDFCurrencyTextField.git", :tag => s.version.to_s }
   s.social_media_url = 'https://twitter.com/joefryer88'
 
   s.platform     = :ios, '7.0'
