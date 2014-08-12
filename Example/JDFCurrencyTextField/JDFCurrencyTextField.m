@@ -136,7 +136,11 @@
 {
     NSString *currentString = self.text;
     
-    NSNumber *number = [NSNumber numberWithDouble:[currentString doubleValue]];
+    static NSNumberFormatter *numberFormatter = nil;
+    if (!numberFormatter) {
+        numberFormatter = [[NSNumberFormatter alloc] init];
+    }
+    NSNumber *number = [numberFormatter numberFromString:currentString];
     if (number.doubleValue == 0) {
         number = [self.currencyFormatter numberFromString:currentString];
     }
