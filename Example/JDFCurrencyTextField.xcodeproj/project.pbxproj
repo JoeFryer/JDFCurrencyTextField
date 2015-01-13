@@ -24,7 +24,7 @@
 		6003F5BA195388D20070C39A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6003F5B8195388D20070C39A /* InfoPlist.strings */; };
 		6003F5BC195388D20070C39A /* Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F5BB195388D20070C39A /* Tests.m */; };
 		F1F94488A0ED4B2BAE91EA8A /* libPods-Tests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 446139FEEEEF4858BDD93A40 /* libPods-Tests.a */; };
-		F26F9ED3197C1A86007990D6 /* JDFCurrencyTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = F26F9ED2197C1A86007990D6 /* JDFCurrencyTextField.m */; };
+		F2E3C1701A65B3D900F36C32 /* JDFCurrencyTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = F2E3C16F1A65B3D900F36C32 /* JDFCurrencyTextField.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,8 +65,8 @@
 		BE5BCC753F4F458BA0EF27F7 /* JDFCurrencyTextField.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = JDFCurrencyTextField.podspec; path = ../JDFCurrencyTextField.podspec; sourceTree = "<group>"; };
 		EAABA5BC79A0487AA85C95E0 /* Pods-Tests.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tests.xcconfig"; path = "Pods/Pods-Tests.xcconfig"; sourceTree = "<group>"; };
 		EE41D88EF9394ACABE0DEF72 /* libPods-JDFCurrencyTextField.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-JDFCurrencyTextField.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		F26F9ED1197C1A86007990D6 /* JDFCurrencyTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JDFCurrencyTextField.h; sourceTree = "<group>"; };
-		F26F9ED2197C1A86007990D6 /* JDFCurrencyTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JDFCurrencyTextField.m; sourceTree = "<group>"; };
+		F2E3C16E1A65B3D900F36C32 /* JDFCurrencyTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JDFCurrencyTextField.h; path = ../../Pod/Classes/JDFCurrencyTextField.h; sourceTree = "<group>"; };
+		F2E3C16F1A65B3D900F36C32 /* JDFCurrencyTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JDFCurrencyTextField.m; path = ../../Pod/Classes/JDFCurrencyTextField.m; sourceTree = "<group>"; };
 		FE7EC9454BCE4E75BBE1E924 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -190,8 +190,8 @@
 		F26F9ED0197C1A56007990D6 /* JDFCurrencyTextField */ = {
 			isa = PBXGroup;
 			children = (
-				F26F9ED1197C1A86007990D6 /* JDFCurrencyTextField.h */,
-				F26F9ED2197C1A86007990D6 /* JDFCurrencyTextField.m */,
+				F2E3C16E1A65B3D900F36C32 /* JDFCurrencyTextField.h */,
+				F2E3C16F1A65B3D900F36C32 /* JDFCurrencyTextField.m */,
 			);
 			name = JDFCurrencyTextField;
 			sourceTree = "<group>";
@@ -363,7 +363,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6003F59E195388D20070C39A /* JDFAppDelegate.m in Sources */,
-				F26F9ED3197C1A86007990D6 /* JDFCurrencyTextField.m in Sources */,
+				F2E3C1701A65B3D900F36C32 /* JDFCurrencyTextField.m in Sources */,
 				6003F5A7195388D20070C39A /* JDFViewController.m in Sources */,
 				6003F59A195388D20070C39A /* main.m in Sources */,
 			);
