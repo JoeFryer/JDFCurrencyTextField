@@ -53,7 +53,7 @@
 
 - (void)setDecimalValue:(NSDecimalNumber *)decimalValue
 {
-    self.text = [decimalValue stringValue];
+    self.text = [self.decimalFormatter stringFromNumber:decimalValue];
     [self formatTextAfterEditing];
 }
 
@@ -141,7 +141,7 @@
     if (number.doubleValue == 0) {
         super.text = @"";
     } else {
-        super.text = [number stringValue];
+        super.text = [self.decimalFormatter stringFromNumber:number];
     }
 }
 
