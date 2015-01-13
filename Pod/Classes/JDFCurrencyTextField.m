@@ -14,6 +14,7 @@
 
 // Formatter
 @property (nonatomic, strong) NSNumberFormatter *currencyFormatter;
+@property (nonatomic, strong) NSNumberFormatter *decimalFormatter;
 
 // Delegate
 @property (nonatomic, weak) id<UITextFieldDelegate> realDelegate;
@@ -52,7 +53,7 @@
 
 - (void)setDecimalValue:(NSDecimalNumber *)decimalValue
 {
-    self.text = [decimalValue stringValue];
+    self.text = [self.decimalFormatter stringFromNumber:decimalValue];
     [self formatTextAfterEditing];
 }
 
@@ -77,13 +78,25 @@
     return _currencyFormatter;
 }
 
+- (NSNumberFormatter *)decimalFormatter
+{
+    if (!_decimalFormatter) {
+        _decimalFormatter = [[NSNumberFormatter alloc] init];
+        [_decimalFormatter setNumberStyle:NSNumberFormatterDecimalStyle];
+        [_decimalFormatter setLocale:self.locale];
+    }
+    return _decimalFormatter;
+}
+
 - (NSDecimalNumber *)decimalValue
 {
+    NSNumberFormatter *numberFormatter;
     if (self.editing) {
-        return [[NSDecimalNumber alloc] initWithDouble:[self.text doubleValue]];
+        numberFormatter = self.decimalFormatter;
     } else {
-        return [NSDecimalNumber decimalNumberWithDecimal:[[self.currencyFormatter numberFromString:self.text] decimalValue]];
+        numberFormatter = self.currencyFormatter;
     }
+    return [NSDecimalNumber decimalNumberWithDecimal:[[numberFormatter numberFromString:self.text] decimalValue]];
 }
 
 
@@ -128,7 +141,7 @@
     if (number.doubleValue == 0) {
         super.text = @"";
     } else {
-        super.text = [number stringValue];
+        super.text = [self.decimalFormatter stringFromNumber:number];
     }
 }
 
@@ -136,7 +149,7 @@
 {
     NSString *currentString = self.text;
     
-    NSNumber *number = [NSNumber numberWithDouble:[currentString doubleValue]];
+    NSNumber *number = [self.decimalFormatter numberFromString:currentString];
     if (number.doubleValue == 0) {
         number = [self.currencyFormatter numberFromString:currentString];
     }
