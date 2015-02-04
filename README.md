@@ -32,12 +32,11 @@ To run the example project, clone the repo, and run `pod install` from the Examp
 
 The user enters a value:
 
-![](Screenshots/JDFCurrencyTextField3.png)
+<img src="Screenshots/JDFCurrencyTextField3.png") width="300"/>
 
 When they finish editing, the value is formatted as a currency:
 
-![](Screenshots/JDFCurrencyTextField4.png)
-
+<img src="Screenshots/JDFCurrencyTextField4.png") width="300"/>
 
 ## Installation
 
