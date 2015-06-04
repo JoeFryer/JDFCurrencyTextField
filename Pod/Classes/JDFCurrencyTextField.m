@@ -153,7 +153,7 @@
     if (number.doubleValue == 0) {
         number = [self.currencyFormatter numberFromString:currentString];
     }
-    if (currentString.length == 0) {
+    if (number == nil || currentString.length == 0) {
         number = @0;
     }
     
