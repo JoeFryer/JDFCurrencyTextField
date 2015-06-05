@@ -150,7 +150,7 @@
     NSString *currentString = self.text;
     
     NSNumber *number = [self.decimalFormatter numberFromString:currentString];
-    if (number.doubleValue == 0) {
+    if (!number) {
         number = [self.currencyFormatter numberFromString:currentString];
     }
     if (!number || currentString.length == 0) {
