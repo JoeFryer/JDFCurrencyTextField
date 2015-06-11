@@ -84,8 +84,8 @@
         _decimalFormatter = [[NSNumberFormatter alloc] init];
         [_decimalFormatter setNumberStyle:NSNumberFormatterDecimalStyle];
         [_decimalFormatter setLocale:self.locale];
+        _decimalFormatter.usesGroupingSeparator = NO;
     }
-    _decimalFormatter.usesGroupingSeparator = NO;
     return _decimalFormatter;
 }
 
