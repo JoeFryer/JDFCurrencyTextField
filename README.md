@@ -56,3 +56,37 @@ Joe Fryer, joe.d.fryer@gmail.com
 ## License
 
 JDFCurrencyTextField is available under the MIT license. See the LICENSE file for more info.
+
+## Release Notes
+
+### 2.1.4
+
+Small improvement to the editing mode formatting: grouping separators are removed.
+
+### 2.1.3
+
+Invalid input is now defaulted to `0`, instead of an empty string.
+
+### 2.1.2
+
+Further localization improvements.
+
+### 2.1.1
+
+Localization improvements.
+
+### 2.1
+
+Initial CocoaPods release
+
+### 2.0
+
+`numericValue` deprecated and replaced by `decimalValue`.
+
+### 1.0.1
+
+Delegate message forwarding bug fixes.
+
+### 1.0
+
+Initial Release
