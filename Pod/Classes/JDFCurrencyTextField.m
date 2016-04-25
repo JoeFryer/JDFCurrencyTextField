@@ -165,13 +165,19 @@
 
 - (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string
 {
+    NSString *resultantString = [textField.text stringByReplacingCharactersInRange:range withString:string];
     if ([string isEqualToString:self.currencyFormatter.minusSign]) {
+        if ([string isEqualToString:resultantString]) {
+            return YES;
+        }
         NSDecimalNumber *decimalNumber = [NSDecimalNumber decimalNumberWithDecimal:[[self.decimalFormatter numberFromString:textField.text] decimalValue]];
         decimalNumber = [decimalNumber decimalNumberByMultiplyingBy:[[NSDecimalNumber alloc] initWithInteger: -1]];
         [super setText:[self.decimalFormatter stringFromNumber:decimalNumber]];
         return NO;
     } else {
-        NSString *resultantString = [textField.text stringByReplacingCharactersInRange:range withString:string];
+        if ([resultantString isEqualToString:self.currencyFormatter.minusSign]) {
+            return YES;
+        }
         NSNumber *number = [self.decimalFormatter numberFromString:resultantString];
         return (number ? YES : NO) || resultantString.length == 0;
     }
