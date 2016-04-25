@@ -42,7 +42,9 @@
 
 - (void)setKeyboardType:(UIKeyboardType)keyboardType
 {
-    [super setKeyboardType:UIKeyboardTypeDecimalPad];
+    if (keyboardType == UIKeyboardTypeDecimalPad || keyboardType == UIKeyboardTypeNumbersAndPunctuation) {
+        [super setKeyboardType:keyboardType];
+    }
 }
 
 - (void)setLocale:(NSLocale *)locale
@@ -134,7 +136,7 @@
 - (void)formatTextInPreparationForEditing
 {
     NSString *currentString = self.text;
-    if (!currentString.length > 0) {
+    if (!(currentString.length > 0)) {
         return;
     }
     
@@ -159,6 +161,20 @@
     }
     
     super.text = [self.currencyFormatter stringFromNumber:number];
+}
+
+- (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string
+{
+    if ([string isEqualToString:self.currencyFormatter.minusSign]) {
+        NSDecimalNumber *decimalNumber = [NSDecimalNumber decimalNumberWithDecimal:[[self.decimalFormatter numberFromString:textField.text] decimalValue]];
+        decimalNumber = [decimalNumber decimalNumberByMultiplyingBy:[[NSDecimalNumber alloc] initWithInteger: -1]];
+        [super setText:[self.decimalFormatter stringFromNumber:decimalNumber]];
+        return NO;
+    } else {
+        NSString *resultantString = [textField.text stringByReplacingCharactersInRange:range withString:string];
+        NSNumber *number = [self.decimalFormatter numberFromString:resultantString];
+        return (number ? YES : NO) || resultantString.length == 0;
+    }
 }
 
 

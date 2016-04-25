@@ -26,6 +26,8 @@ You can then retrieve the value again as an `NSDecimalNumber` via the `decimalVa
 
 You can change the locale that is used for the currency formatting. To do this, set your JDFCurrencyTextField's `locale` property with your desired locale. You should do this before setting the `text` property.
 
+The keyboard defaults to UIKeyboardTypeDecimalPad. JDFCurrencyTextField also supports negative numbers, but you will need to set the keyboard type to UIKeyboardTypeNumbersAndPunctuation.
+
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
 
 ## Screenshots
