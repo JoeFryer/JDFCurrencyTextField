@@ -9,7 +9,7 @@
 
 Pod::Spec.new do |s|
   s.name             = "JDFCurrencyTextField"
-  s.version          = "2.1.4"
+  s.version          = "2.2"
   s.summary          = "A drop-in replacement for UITextField to make it easier to work with monetary values."
   s.description      = <<-DESC
                         JDFCurrencyTextField is a drop-in replacement for UITextField to make it easier to work with monetary values. JDFCurrencyTextField makes it easier to enter monetary values because it formats the cell's text as a numeric string while the user is editing it, and formats it back to a currency string when they have finished. It defaults to using the currentLocale for the formatting, but this can be changed if necessary.
